@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Culture & Tourism Blog - Cultural Compass</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+
+    <!-- 1. Header / Main Navigation -->
+    <header class="home-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_placeholder.png" alt="Cultural Compass">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="culture.html">Explore culture</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html" class="active">Blogs</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="map.html">Map</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Search villages, stories..." aria-label="Search">
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i> <!-- Placeholder icon --></button>
+                </div>
+                 <div class="language-selector">
+                     <select aria-label="Select Language">
+                         <option value="en">English</option>
+                         <option value="hi">हिन्दी</option>
+                         <option value="ta">தமிழ்</option>
+                         <!-- Add other languages -->
+                     </select>
+                 </div>
+                
+                <div class="user-profile" id="user-profile-section" style="display: none;">
+                    <a href="dashboard.html" id="profile-link">
+                        <img id="user-avatar" src="avatar.jpg" alt="User Avatar" class="user-avatar">
+                    </a>
+                </div>
+            </div>
+             <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="section-header">
+                <h1>Indian Culture & Tourism Blog</h1>
+                <p class="section-subtitle">Discover stories, experiences, and insights about India's rich cultural heritage and tourism destinations</p>
+            </div>
+
+            <div class="content-actions">
+                <button class="btn btn-primary" id="createBlogBtn">
+                    <i class="fas fa-plus"></i> Create New Blog
+                </button>
+                <div class="filter-group">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="culture">Culture</option>
+                        <option value="tourism">Tourism</option>
+                        <option value="festivals">Festivals</option>
+                        <option value="food">Food</option>
+                        <option value="heritage">Heritage</option>
+                    </select>
+                    <select id="sortFilter">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content-grid" id="blogPosts">
+                <!-- Blog Post 1 -->
+                <article class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Rajasthan Fort" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-post-category">Heritage</span>
+                        <h3 class="blog-post-title">The Timeless Beauty of the Taj Mahal: A Symbol of Eternal Love</h3>
+                        <p class="blog-post-excerpt">Explore the fascinating history and architectural marvel of India's most iconic monument, the Taj Mahal. Learn about its construction, the love story behind it, and the best times to visit.</p>
+                        <div class="blog-post-meta">
+                            <div class="blog-post-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+                                <span>Rajesh Kumar</span>
+                            </div>
+                            <span>March 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Diwali Festival" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-post-category">Festivals</span>
+                        <h3 class="blog-post-title">Diwali: The Festival of Lights and Its Cultural Significance</h3>
+                        <p class="blog-post-excerpt">Discover the traditions, rituals, and cultural importance of Diwali, India's most celebrated festival. From lighting diyas to sharing sweets, learn how this festival brings communities together.</p>
+                        <div class="blog-post-meta">
+                            <div class="blog-post-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                                <span>Priya Sharma</span>
+                            </div>
+                            <span>March 10, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Indian Cuisine" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-post-category">Food</span>
+                        <h3 class="blog-post-title">A Culinary Journey Through India's Regional Cuisines</h3>
+                        <p class="blog-post-excerpt">From the spicy curries of the south to the rich Mughlai dishes of the north, explore the diverse and flavorful world of Indian cuisine. Learn about traditional cooking methods and must-try dishes.</p>
+                        <div class="blog-post-meta">
+                            <div class="blog-post-author">
+                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Author">
+                                <span>Vikram Singh</span>
+                            </div>
+                            <span>March 5, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kerala Backwaters" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-post-category">Tourism</span>
+                        <h3 class="blog-post-title">Exploring Kerala's Backwaters: A Serene Escape</h3>
+                        <p class="blog-post-excerpt">Experience the tranquil beauty of Kerala's backwaters through this comprehensive guide. From houseboat stays to local cuisine, discover why this destination is a must-visit for nature lovers.</p>
+                        <div class="blog-post-meta">
+                            <div class="blog-post-author">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Author">
+                                <span>Ananya Patel</span>
+                            </div>
+                            <span>February 28, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Indian Classical Dance" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-post-category">Culture</span>
+                        <h3 class="blog-post-title">The Art of Indian Classical Dance: A Cultural Treasure</h3>
+                        <p class="blog-post-excerpt">Delve into the world of Indian classical dance forms like Bharatanatyam, Kathak, and Odissi. Learn about their origins, significance, and how they continue to preserve India's cultural heritage.</p>
+                        <div class="blog-post-meta">
+                            <div class="blog-post-author">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Author">
+                                <span>Arjun Mehta</span>
+                            </div>
+                            <span>February 20, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Rajasthan Fort" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-post-category">Heritage</span>
+                        <h3 class="blog-post-title">Rajasthan's Majestic Forts: A Journey Through History</h3>
+                        <p class="blog-post-excerpt">Explore the magnificent forts of Rajasthan, including Amer Fort, Mehrangarh Fort, and Jaisalmer Fort. Discover their architectural brilliance and the stories they hold within their walls.</p>
+                        <div class="blog-post-meta">
+                            <div class="blog-post-author">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Author">
+                                <span>Meera Joshi</span>
+                            </div>
+                            <span>February 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Creation Modal -->
+            <div class="modal" id="blogModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Create New Blog Post</h2>
+                    <form id="blogForm">
+                        <div class="form-group">
+                            <label for="blogTitle">Title</label>
+                            <input type="text" id="blogTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="blogCategory">Category</label>
+                            <select id="blogCategory" required>
+                                <option value="culture">Culture</option>
+                                <option value="tourism">Tourism</option>
+                                <option value="festivals">Festivals</option>
+                                <option value="food">Food</option>
+                                <option value="heritage">Heritage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="blogImage">Featured Image</label>
+                            <input type="file" id="blogImage" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="blogContent">Content</label>
+                            <textarea id="blogContent" rows="10" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="blogTags">Tags (comma separated)</label>
+                            <input type="text" id="blogTags" placeholder="e.g., india, culture, tourism">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Publish Blog</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="home-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Cultural Compass</h4>
+                    <p>Preserving culture, connecting communities.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Become a Contributor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#trails">Cultural Trails</a></li>
+                        <li><a href="#villages">Villages</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Content Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cultural Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html> 

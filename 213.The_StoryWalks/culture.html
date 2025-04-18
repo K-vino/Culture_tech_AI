@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Culture - Cultural Compass</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="culture.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="home-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_placeholder.png" alt="Cultural Compass">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#culture">Explore culture</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#map">Map</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Search villages, stories..." aria-label="Search">
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i> <!-- Placeholder icon --></button>
+                </div>
+                 <div class="language-selector">
+                     <select aria-label="Select Language">
+                         <option value="en">English</option>
+                         <option value="hi">हिन्दी</option>
+                         <option value="ta">தமிழ்</option>
+                         <!-- Add other languages -->
+                     </select>
+                 </div>
+                
+                <div class="user-profile" id="user-profile-section" style="display: none;">
+                    <a href="dashboard.html" id="profile-link">
+                        <img id="user-avatar" src="avatar.jpg" alt="User Avatar" class="user-avatar">
+                    </a>
+                </div>
+            </div>
+             <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <body>
+    
+        <!-- Main Alternating Layout Section -->
+        <main class="main-content">
+            <section class="alt-section">
+                <div class="alt-section-inner">
+                    <div class="alt-image left">
+                        <img src="https://img.freepik.com/premium-photo/religious-symbols-christianity-cross-islam-crescent-buddhism-dharma-wheel-hinduism-aum-judaism-david-star-taoism-yin-yang-world-religion-concept-prophets-all-religions-bring-peace-world_2379-3237.jpg" alt=">Religious Diversity" style="width: 100%; height: 80%;">
+                    </div>
+                    <div class="alt-content right">
+                        <h2>Religious Diversity</h2>
+                        <p>India, a spiritual mosaic, embraces Hinduism, Islam, Christianity, Sikhism, Buddhism, Jainism, and Zoroastrianism—each shaping daily life, festivals, and rituals with vibrant expressions of faith.</p>
+            <button class="show-more-btn">Explore Faiths</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="alt-section">
+                <div class="alt-section-inner reverse">
+                    <div class="alt-image right">
+                        <img src="https://hindupost.in/wp-content/uploads/2023/02/indian-languages.png" alt="Languages of India" style="width: 60%; height:50%;">
+                    </div>
+                    <div class="alt-content left">
+                        <h2>Languages of India</h2>
+                        <p>Home to 22 official languages and hundreds of dialects, India's linguistic richness reflects diverse traditions and literary treasures passed through generations.</p>
+                        <button class="show-more-btn">Discover Languages</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alt-section">
+                <div class="alt-section-inner">
+                    <div class="alt-image left">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Language_Map_of_India.jpg" alt="Regional Identities" style="width: 60%; height:50%;">
+                    </div>
+                    <div class="alt-content right">
+                        <h2>Regional Identities</h2>
+            <p>From the flavors of Punjab to the rhythms of Tamil Nadu, each region offers a unique cultural identity shaped by history, geography, and people.</p>
+            <button class="show-more-btn">See Regions</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alt-section">
+                <div class="alt-section-inner reverse">
+                    <div class="alt-image right">
+                        <img src="https://static.toiimg.com/img/75446152/Master.jpg" alt="Performing Arts">
+                    </div>
+                    <div class="alt-content left">
+                        <h2>Performing Arts</h2>
+            <p>India's spirit comes alive through its classical dances, folk traditions, vibrant music, and captivating theatre forms like Kathakali and Yakshagana.</p>
+            <button class="show-more-btn">Watch Performances</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alt-section">
+                <div class="alt-section-inner">
+                    <div class="alt-image left">
+                        <img src="https://i.pinimg.com/736x/a9/70/97/a970978a510d3d313ca23339ebf98c6f.jpg" alt="Festivals & Rituals" style="width: 80%; height: 70%;">
+                    </div>
+                    <div class="alt-content right">
+                        <h2>Festivals & Rituals</h2>
+            <p>India celebrates life with color and devotion—Diwali, Eid, Christmas, Pongal, and Hornbill—each with regional flavors and deep-rooted meanings.</p>
+            <button class="show-more-btn">Join the Celebrations</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="alt-section">
+                <div class="alt-section-inner reverse">
+                    <div class="alt-image right">
+                        <img src="https://static.wixstatic.com/media/34a704_3f3c0eca00a246348e9b68222a5193b9~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85/34a704_3f3c0eca00a246348e9b68222a5193b9~mv2.jpg" alt="Cuisine Trail">
+                    </div>
+                    <div class="alt-content left">
+                        <h2>Cuisine Trail</h2>
+            <p>From spicy curries of the South to sweet delights of the East, Indian food is a journey of regional spices, rituals, and tradition.</p>
+            <button class="show-more-btn">Taste More</button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="alt-section">
+                <div class="alt-section-inner">
+                    <div class="alt-image left">
+                        <img src="https://i.ytimg.com/vi/LeZ1K0Fu49o/maxresdefault.jpg" alt="Textiles & Traditions">
+                    </div>
+                    <div class="alt-content right">
+                        <h2>Textiles & Traditions</h2>
+            <p>Sarees, turbans, and intricate weaves like Kanjeevaram and Pashmina reflect India's textile mastery and symbolic clothing heritage.</p>
+            <button class="show-more-btn">Explore Styles</button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="alt-section">
+                <div class="alt-section-inner reverse">
+                    <div class="alt-image right">
+                        <img src="https://www.esamskriti.com/essays/docfile/883.jpg" alt="Architectural Wonders">
+                    </div>
+                    <div class="alt-content left">
+                        <h2>Architectural Wonders</h2>
+            <p>From ancient temples to Mughal marvels and colonial legacies, India’s architecture narrates centuries of art, power, and devotion.</p>
+            <button class="show-more-btn">View Monuments</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="alt-section">
+                <div class="alt-section-inner">
+                    <div class="alt-image left">
+                        <img src="https://upgradingindia.com/wp-content/uploads/2020/12/FOUR-VEDAS-OF-INDIA.jpg" alt="Wisdom & Words">
+                    </div>
+                    <div class="alt-content right">
+                        <h2>Wisdom & Words</h2>
+                        <p>With Vedas, Puranas, and literary legends like Tagore and Narayan, India's philosophical legacy and literature shape global thought.</p>
+                        <button class="show-more-btn">Read More</button>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+    
+        <script src="alternating-sections.js"></script>
+    </body>
+    </html>
+    

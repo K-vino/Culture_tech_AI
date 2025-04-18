@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover cultural events across India with Cultural Compass's comprehensive calendar">
+    <title>Cultural Calendar | Cultural Compass - Explore India's Heritage</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="home-header" role="banner">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Cultural Compass Home">
+                <img src="images/logo_placeholder.png" alt="Cultural Compass Logo" width="180" height="50">
+            </a>
+            
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#culture" class="nav-link">Explore Culture</a></li>
+                    <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="#blogs" class="nav-link">Blogs</a></li>
+                    <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="#map" class="nav-link">Map</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-container" role="search">
+                    <form class="search-form">
+                        <input type="search" placeholder="Search villages, stories..." aria-label="Search cultural content">
+                        <button type="submit" class="search-btn" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                
+                <div class="language-selector">
+                    <select aria-label="Select Language" class="lang-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                </div>
+                
+                <div class="user-profile" id="user-profile-section">
+                    <a href="dashboard.html" id="profile-link" aria-label="User Dashboard">
+                        <img id="user-avatar" src="avatar.jpg" alt="User Profile" class="user-avatar" width="40" height="40">
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="calendar-main" id="main-content">
+        <div class="container">
+            <section class="calendar-container" aria-labelledby="calendar-heading">
+                <header class="calendar-header">
+                    <h1 id="calendar-heading"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Cultural Calendar</h1>
+                    <p class="section-subtitle">Discover and explore upcoming cultural events across India</p>
+                </header>
+                
+                <section class="calendar-filters" aria-labelledby="filter-heading">
+                    <h2 id="filter-heading" class="visually-hidden">Event Filters</h2>
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="regionFilter" class="filter-label">Region</label>
+                            <select id="regionFilter" class="filter-select">
+                                <option value="all">All Regions</option>
+                                <option value="north">North India</option>
+                                <option value="south">South India</option>
+                                <option value="east">East India</option>
+                                <option value="west">West India</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="monthFilter" class="filter-label">Month</label>
+                            <select id="monthFilter" class="filter-select">
+                                <option value="all">All Months</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        
+                        <button id="applyFilters" class="btn btn-primary filter-btn">
+                            <i class="fas fa-filter" aria-hidden="true"></i> Apply Filters
+                        </button>
+                    </div>
+                </section>
+                
+                <section class="events-section" aria-labelledby="events-heading">
+                    <h2 id="events-heading">Upcoming Events</h2>
+                    <div class="events-list" id="eventList" role="list">
+                        <!-- Dynamic content will be loaded here -->
+                        <div class="event-placeholder">
+                            <p>Loading cultural events...</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <aside id="infoBox" class="event-info-box" aria-labelledby="info-heading" hidden>
+                    <h2 id="info-heading"><i class="fas fa-info-circle" aria-hidden="true"></i> Cultural Significance</h2>
+                    <div class="event-details">
+                        <h3 id="selectedEvent" class="event-title">Event Name</h3>
+                        <div class="event-meta">
+                            <span id="eventDate" class="event-date"><i class="far fa-calendar-alt"></i> Date</span>
+                            <span id="eventLocation" class="event-location"><i class="fas fa-map-marker-alt"></i> Location</span>
+                        </div>
+                        <div class="event-description">
+                            <p id="eventInfoText">Detailed information about the cultural event will appear here.</p>
+                        </div>
+                        <div class="event-actions">
+                            <button id="shareEvent" class="btn btn-secondary action-btn">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i> Share
+                            </button>
+                            <button id="saveEvent" class="btn btn-secondary action-btn">
+                                <i class="fas fa-bookmark" aria-hidden="true"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="home-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <section class="footer-col brand-info">
+                    <h4 class="footer-heading">Cultural Compass</h4>
+                    <p class="footer-text">Preserving culture, connecting communities.</p>
+                </section>
+                
+                <section class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">How it Works</a></li>
+                        <li><a href="#" class="footer-link">Become a Contributor</a></li>
+                    </ul>
+                </section>
+                
+                <section class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#trails" class="footer-link">Cultural Trails</a></li>
+                        <li><a href="#villages" class="footer-link">Villages</a></li>
+                        <li><a href="#stories" class="footer-link">Stories</a></li>
+                        <li><a href="#" class="footer-link">Regions</a></li>
+                    </ul>
+                </section>
+                
+                <section class="footer-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Content Policy</a></li>
+                    </ul>
+                </section>
+                
+                <section class="footer-col social-col">
+                    <h4 class="footer-heading">Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Cultural Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="calendar.js" defer></script>
+</body>
+</html>

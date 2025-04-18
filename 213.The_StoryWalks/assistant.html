@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Cultural Assistant - Cultural Compass</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="assistant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="home-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_placeholder.png" alt="Cultural Compass">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#culture">Explore culture</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#map">Map</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Search villages, stories..." aria-label="Search">
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="language-selector">
+                    <select aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                </div>
+                <div class="user-profile" id="user-profile-section" style="display: none;">
+                    <a href="dashboard.html" id="profile-link">
+                        <img id="user-avatar" src="avatar.jpg" alt="User Avatar" class="user-avatar">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="assistant-main">
+        <div class="container">
+            <div class="assistant-container">
+                <h1><i class="fas fa-globe"></i> Multilingual Cultural Assistant</h1>
+                <p class="section-subtitle">Ask questions about Indian culture and get responses in your preferred language</p>
+
+                <div class="assistant-form">
+                    <textarea id="assistantPrompt" placeholder="E.g., Tell me about Pongal festival, What are the traditional dances of Kerala, Explain the significance of Diwali..."></textarea>
+
+                    <div class="language-selection">
+                        <label for="langSelect">Select Language</label>
+                        <select id="langSelect">
+                            <option value="en">English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hi">Hindi</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="de">German</option>
+                            <option value="ja">Japanese</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="getNarration()">
+                        <i class="fas fa-volume-up"></i> Translate & Narrate
+                    </button>
+
+                    <div id="assistantOutput" class="assistant-output" style="display: none;">
+                        <h2><i class="fas fa-comment-alt"></i> Response</h2>
+                        <p id="assistantText"></p>
+                        <div class="audio-player">
+                            <audio controls id="assistantAudio"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="home-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Cultural Compass</h4>
+                    <p>Preserving culture, connecting communities.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Become a Contributor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#trails">Cultural Trails</a></li>
+                        <li><a href="#villages">Villages</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Content Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cultural Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assistant.js"></script>
+</body>
+</html> 

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Events - Cultural Compass</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="events-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="home-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_placeholder.png" alt="Cultural Compass">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="culture.html">Explore culture</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="map.html">Map</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Search villages, stories..." aria-label="Search">
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="language-selector">
+                    <select aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                </div>
+                <div class="user-profile" id="user-profile-section" style="display: none;">
+                    <a href="dashboard.html" id="profile-link">
+                        <img id="user-avatar" src="avatar.jpg" alt="User Avatar" class="user-avatar">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="events-page">
+        <section class="page-hero" style="background-image: url('https://static.toiimg.com/photo/msid-114967565,width-1280,height-720/114967565.jpg');">
+            <div class="hero-content">
+                <h1 style="color: white;">Cultural Events</h1>
+                <p style="color: white;">Discover and experience India's rich cultural festivals and events</p>
+            </div>
+        </section>        
+        
+        
+
+        <section class="events-filter">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label>Location:</label>
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Kerala">Kerala</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Month:</label>
+                        <select id="month-filter">
+                            <option value="">All Months</option>
+                            <option value="1">January</option>
+                            <option value="4">April</option>
+                            <option value="7">July</option>
+                            <option value="10">October</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Year:</label>
+                        <select id="year-filter">
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-calendar">
+            <div class="container">
+                <div class="calendar-view">
+                    <div class="calendar-header">
+                        <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h2 id="current-month">January 2025</h2>
+                        <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-days">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-dates" id="calendar-dates">
+                            <!-- Dates will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="events-list">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="events-grid" id="events-container">
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading events...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="event-details-modal" id="event-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-event-name">Event Name</h2>
+                    <p id="modal-event-date">Date: January 15, 2025</p>
+                </div>
+                <div class="modal-body">
+                    <div class="event-info">
+                        <p><strong>Location:</strong> <span id="modal-event-location">Location</span></p>
+                        <p><strong>Cultural Date:</strong> <span id="modal-event-culture-date">Cultural Date</span></p>
+                    </div>
+                    <div class="event-description">
+                        <h3>About the Event</h3>
+                        <p id="modal-event-description">Loading event description...</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="add-to-calendar">Add to Calendar</button>
+                    <button class="btn btn-secondary" id="share-event">Share</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="home-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Cultural Compass</h4>
+                    <p>Preserving culture, connecting communities.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Become a Contributor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#trails">Cultural Trails</a></li>
+                        <li><a href="#villages">Villages</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#regions">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Content Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cultural Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="home-script.js"></script>
+    <script type="module" src="events-script.js"></script>
+</body>
+</html>

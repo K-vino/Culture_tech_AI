@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner - Cultural Compass</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="planner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="home-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_placeholder.png" alt="Cultural Compass">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#culture">Explore culture</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#map">Map</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Search villages, stories..." aria-label="Search">
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="language-selector">
+                    <select aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="ta">தமிழ்</option>
+                    </select>
+                </div>
+                <div class="user-profile" id="user-profile-section" style="display: none;">
+                    <a href="dashboard.html" id="profile-link">
+                        <img id="user-avatar" src="avatar.jpg" alt="User Avatar" class="user-avatar">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="planner-container">
+        <div class="planner-header">
+            <h1>Plan Your Cultural Journey</h1>
+            <p>Create a personalized travel itinerary that matches your interests and preferences</p>
+        </div>
+
+        <form id="plannerForm" class="planner-form">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="start">Starting Point</label>
+                    <input type="text" id="start" placeholder="Enter your starting location">
+                </div>
+
+                <div class="input-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" placeholder="Enter your destination">
+                </div>
+
+                <div class="input-group">
+                    <label for="num_days">Number of Days</label>
+                    <input type="number" id="num_days" min="1" placeholder="Enter number of days">
+                </div>
+
+                <div class="input-group">
+                    <label for="travel_mode">Travel Mode</label>
+                    <select id="travel_mode">
+                        <option value="Train">Train</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Flight">Flight</option>
+                        <option value="Car">Car</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="trip_type">Trip Type</label>
+                    <select id="trip_type">
+                        <option value="Solo">Solo</option>
+                        <option value="Family">Family</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Couple">Couple</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="accommodation">Accommodation</label>
+                    <select id="accommodation">
+                        <option value="Hotel">Hotel</option>
+                        <option value="Hostel">Hostel</option>
+                        <option value="Homestay">Homestay</option>
+                        <option value="Resort">Resort</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget">
+                        <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
+                        <option value="₹10,000 - ₹15,000">₹10,000 - ₹15,000</option>
+                        <option value="₹15,000 - ₹20,000">₹15,000 - ₹20,000</option>
+                        <option value="₹20,000+">₹20,000+</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="language">Preferred Language</label>
+                    <select id="language">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Malayalam">Malayalam</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Food Preferences</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="veg" value="Vegetarian">
+                        <label for="veg">Vegetarian</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="non_veg" value="Non-Vegetarian">
+                        <label for="non_veg">Non-Vegetarian</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vegan" value="Vegan">
+                        <label for="vegan">Vegan</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="local" value="Local Cuisine">
+                        <label for="local">Local Cuisine</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="must_include">Must Include</label>
+                <input type="text" id="must_include" placeholder="e.g., Beaches, Temples, Museums">
+            </div>
+
+            <div class="input-group">
+                <label for="must_avoid">Must Avoid</label>
+                <input type="text" id="must_avoid" placeholder="e.g., Crowds, Nightlife">
+            </div>
+
+            <div class="input-group">
+                <label for="accessibility">Accessibility Requirements</label>
+                <select id="accessibility">
+                    <option value="None">None</option>
+                    <option value="Wheelchair">Wheelchair Accessible</option>
+                    <option value="Limited Mobility">Limited Mobility</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Generate Plan</button>
+        </form>
+
+        <div id="resultBox" class="results-section" style="display: none;">
+            <h2>Your Travel Plan</h2>
+            <div id="planResult"></div>
+        </div>
+    </main>
+
+    <footer class="home-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Cultural Compass</h4>
+                    <p>Preserving culture, connecting communities.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Become a Contributor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#trails">Cultural Trails</a></li>
+                        <li><a href="#villages">Villages</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#">Regions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Content Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cultural Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="planner.js"></script>
+    <script src="home-script.js"></script>
+</body>
+</html>

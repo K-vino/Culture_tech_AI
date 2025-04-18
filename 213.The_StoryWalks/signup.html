@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your existing styles -->
+</head>
+<body>
+    <!-- Optional: Add Header like Proton if desired -->
+    <!-- <header class="page-header"> -->
+        <!-- <img src="your-logo.png" alt="Logo" class="logo"> -->
+        <!-- Language selector can go here -->
+    <!-- </header> -->
+
+    <div class="signup-container">
+        <h2>Create account</h2>
+        <p class="subtitle">to get started</p>
+
+        <form id="signup-form">
+            <!-- Authentication Fields -->
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Minimum 6 characters">
+            </div>
+
+            <hr class="divider">
+
+            <!-- User Details Fields Required for Firestore -->
+             <div class="input-group">
+                <label for="fullName">Full Name</label> <!-- This will populate 'username' -->
+                <input type="text" id="fullName" required>
+            </div>
+             <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" required min="1">
+            </div>
+             <div class="input-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" required>
+            </div>
+            <div class="input-group">
+                <label for="state">State</label>
+                <input type="text" id="state" required>
+            </div>
+            <div class="input-group">
+                <label for="city">City / District</label> <!-- This will populate 'district' -->
+                <input type="text" id="city" required>
+            </div>
+            <!-- Added phoneNumber input -->
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" placeholder="e.g., +91 1234567890"> <!-- Changed type to tel -->
+                <!-- Add 'required' if phone number is mandatory -->
+            </div>
+            <!-- Added profileImage input -->
+             <div class="input-group">
+                <label for="profileImage">Profile Image URL (Optional)</label>
+                <input type="url" id="profileImage" placeholder="https://example.com/image.jpg"> <!-- Changed type to url -->
+            </div>
+
+            <!-- Removed Role Selection as it's not in the final Firestore spec -->
+            <!-- phoneNumber and profileImage are NOT collected here, will be initialized in JS -->
+
+            <button type="submit">Create Account</button>
+            <p id="error-message" class="error"></p>
+
+            <hr class="divider">
+
+            <p class="footer-link">
+                Already have an account? <a href="index.html">Sign in</a>
+            </p>
+             <!-- Add "Trouble signing in?" link if needed -->
+             <!-- <p class="footer-link secondary-link"><a href="#">Trouble signing up?</a></p> -->
+        </form>
+    </div>
+
+     <!-- Optional: Add Footer like Proton if desired -->
+     <!-- <footer class="page-footer"> -->
+         <!-- Help link -->
+     <!-- </footer> -->
+
+     
+    <!-- Link to the signup JavaScript -->
+    <script type="module" src="signup.js"></script>
+    <script type="module" src="storage.js"></script>
+    <script type="module" src="navigation.js"></script>
+
+    <!-- Example: Upload a video -->
+    <script>
+    const fileInput = document.querySelector('input[type="file"]');
+    fileInput.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        const result = await window.storageFunctions.uploadVideo(file, userId);
+        if (result.success) {
+            // Use result.url in your application
+        }
+    });
+    </script>
+</body>
+</html> 
