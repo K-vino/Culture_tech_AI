@@ -4,18 +4,7 @@ Hello Team **The StoryWalks** from **KNOWLEDGE INSTITUTE OF TECHNOLOGY**,
 
 Welcome to the Hackathon! We're excited to have you on board and can't wait to see what you'll build under the theme **"Boosting Culture and Tourism Through Tech"** 
 
-## Team Details
 
-- **Team Number:** 213  
-- **Team Name:** The StoryWalks
-- **Team Leader:** SOWNDARIYA K  
-- **Email:** 2k22it51@kiot.ac.in  
-- **Phone:** 6374867255  
-
-### Team Members:
-- KAVINKUMAR R 
-- VINO K 
-- SOUNDARAJAN A 
 
 ## Problem Statement
 
